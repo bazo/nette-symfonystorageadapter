@@ -1,11 +1,12 @@
 <?php
 namespace Bazo;
+use Nette\Http\ISessionStorage;
 /**
  * SymfonySessionStorageAdapter
  *
  * @author Martin
  */
-class SymfonySessionStorageAdapter implements Nette\Http\ISessionStorage
+class SymfonySessionStorageAdapter implements ISessionStorage
 {
 	
 	private
