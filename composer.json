@@ -1,0 +1,21 @@
+{
+    "name": "bazo / nette-symfonystorageadapter",
+	"type": "library",
+    "description": "Nette session storage adapter for Symfony 2 storage handlers",
+    "keywords": ["nette","session","adapter","symfony 2"],
+    "homepage": "https://github.com/bazo/nette-symfonystorageadapter",
+    "authors": [
+        {
+            "name": "Martin Bažík",
+            "email": "martin@bazo.sk",
+            "homepage": "http://bazo.sk"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.0",
+		"symfony/http-foundation": "*"
+    },
+	"autoload": {
+        "psr-0": { "Bazo": "" }
+    }
+}
