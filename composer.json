@@ -1,5 +1,5 @@
 {
-    "name": "bazo / nette-symfonystorageadapter",
+    "name": "bazo/nette-symfonystorageadapter",
 	"type": "library",
     "description": "Nette session storage adapter for Symfony 2 storage handlers",
     "keywords": ["nette","session","adapter","symfony 2"],
