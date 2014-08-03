@@ -8,45 +8,43 @@ use Nette\Http\ISessionStorage;
  */
 class SymfonySessionStorageAdapter implements ISessionStorage
 {
-	
-	private
-		/** @var \SessionHandlerInterface */	
-		$symfonyHandler
-	;
-	
-	function __construct(\SessionHandlerInterface $symfonyHandler)
-	{
-		$this->symfonyHandler = $symfonyHandler;
-	}
 
-	
-	function open($savePath, $sessionName)
-	{
-		return $this->symfonyHandler->open($savePath, $sessionName);
-	}
+    /** @var \SessionHandlerInterface */
+        private $symfonyHandler
+    ;
 
-	function close()
-	{
-		return $this->symfonyHandler->close();
-	}
+    public function __construct(\SessionHandlerInterface $symfonyHandler)
+    {
+        $this->symfonyHandler = $symfonyHandler;
+    }
 
-	function read($id)
-	{
-		return $this->symfonyHandler->read($id);
-	}
+    public function open($savePath, $sessionName)
+    {
+        return $this->symfonyHandler->open($savePath, $sessionName);
+    }
 
-	function write($id, $data)
-	{
-		return $this->symfonyHandler->write($id, $data);
-	}
+    public function close()
+    {
+        return $this->symfonyHandler->close();
+    }
 
-	function remove($id)
-	{
-		return $this->symfonyHandler->destroy($id);
-	}
+    public function read($id)
+    {
+        return $this->symfonyHandler->read($id);
+    }
 
-	function clean($maxlifetime)
-	{
-		return $this->symfonyHandler->gc($maxlifetime);
-	}
+    public function write($id, $data)
+    {
+        return $this->symfonyHandler->write($id, $data);
+    }
+
+    public function remove($id)
+    {
+        return $this->symfonyHandler->destroy($id);
+    }
+
+    public function clean($maxlifetime)
+    {
+        return $this->symfonyHandler->gc($maxlifetime);
+    }
 }
